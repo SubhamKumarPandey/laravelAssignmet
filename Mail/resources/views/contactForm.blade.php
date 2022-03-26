@@ -9,7 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="bg bg-secondary">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3 mt-5">
@@ -24,12 +24,12 @@
                     </div>
                     @endif
                     <div class="form-group">
-                        <label for="">Name</label>
+                        <label for="">UserName</label>
                         <input type="text" class="form-control" name="name" placeholder="Enter your name" value="{{old('name')}}">
                         @error('name')<span class="text-danger">{{$message}}</span>@enderror
                     </div><br>
                     <div class="form-group">
-                        <label for="">Email</label>
+                        <label for="">User Email</label>
                         <input type="text" class="form-control" name="email" placeholder="Enter email" value="{{old('email')}}">
                         @error('email')<span class="text-danger">{{$message}}</span>@enderror
                     </div><br>
@@ -39,11 +39,11 @@
                         @error('subject')<span class="text-danger">{{$message}}</span>@enderror
                     </div><br>
                     <div class="form-group">
-                        <label for="">Message</label>
+                        <label for="">Text Message</label>
                        <textarea name="message" class="form-control" cols="4" rows="4">{{old('message')}}</textarea>
                         @error('message')<span class="text-danger">{{$message}}</span>@enderror
                     </div><br>
-                    <button class="btn btn-primary">Send</button>
+                    <button class="btn btn-danger">Send</button>
                 </form>
             </div>
         </div>

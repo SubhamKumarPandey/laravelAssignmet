@@ -9,25 +9,30 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="bg bg-secondary">
 <center>
-<h1>Find Sum</h1>
+<h1>Get Sum</h1>
+<br>
 <form action="add" method="POST">
     @csrf
     <div class="form-group">
-    <b>1st Number:</b>
+    <b>1st Input:</b>
+    <br>
+    <br>
        <input type="text" name="firstnumber" />
        @error('firstnumber')<span class="text-danger">{{$message}}</span>@enderror
     </div>
     <br>
     <div class="form-group">
-    <b>2nd Number:</b>
+    <b>2nd Input:</b>
+    <br>
+    <br>
    <input type="text" name="secondnumber"/>
    @error('secondnumber')<span class="text-danger">{{$message}}</span>@enderror
    </div>
    <br>
-    <button class="btn btn-primary" type="submit">Add</button>
-   
+    <button class="btn btn-danger" type="submit">Add</button>
+
 </form>
 </center>
 </body>
